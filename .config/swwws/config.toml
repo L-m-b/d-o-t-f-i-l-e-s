@@ -2,11 +2,11 @@
 
 # Global settings applied to all outputs unless overridden
 [global]
-duration = "5s"
+duration = "10s"
 sorting = "Random"
 transition_type = "random"
-transition_step = 90
-queue_size = 500
+transition_step = 180
+queue_size = 1000
 recursive = true
 
 # Monitor behavior: Independent, Synchronized, or Grouped
