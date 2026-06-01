@@ -1,1 +1,109 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin-top": 5,
+  "margin-left": 5,
+  "margin-right": 5,
+  
+  "modules-left": [
+    "sway/window",
+    "sway/workspaces",
+    "hyprland/workspaces",
+    "sway/scratchpad",
+    "disk",
+    "cpu",
+    "memory"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "battery",
+    "backlight",
+    "bluetooth",
+    "pulseaudio",
+    "network"
+  ],
 
+  "sway/scratchpad": {
+    "format": " {count}",
+    "show-empty": false,
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}"
+  },
+  "sway/window": {
+    "format": "{app_id}",
+    "min-length": 7,
+    "max-length": 7,
+    "separate-outputs": true,
+    "icon": true
+  },
+  "disk": {
+    "interval": 60,
+    "format": " {percentage_used}%",
+    "min-length": 7,
+    "max-length": 7,
+    "tooltip-format": "{used}/{total}",
+    "on-click": "kitty --class float yazi"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "min-length": 7,
+    "max-length": 7,
+    "tooltip-format": "{usage}%",
+    "on-click": "kitty --class float btop"
+  },
+  "memory": {
+    "interval": 1,
+    "format": " {}%",
+    "min-length": 7,
+    "max-length": 7,
+    "tooltip-format": "{used}/{total} GiB",
+    "on-click": "kitty --class float btop"
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " {essid}",
+    "format-disconnected": " ",
+    "min-length": 12,
+    "max-length": 12,
+    "interval": 5,
+    "tooltip-format-wifi": " {bandwidthDownBytes} |  {bandwidthUpBytes}",
+    "on-click": "kitty --class float sudo nmtui"
+  },
+    "bluetooth": {    
+    "on-click": "blueman-manager",
+    "min-length": 12,
+    "max-length": 12
+},
+  "pulseaudio": {
+    "format": "{volume}, {desc}",
+    "min-length": 12,
+    "max-length": 12,
+    "format-muted": "M",
+    "tooltip-format": "{desc}",
+    "on-click": "kitty --class floatr pulsemixer"
+  },
+  "backlight": {
+    "scroll-step": 5,
+    "format": " {percent}%",
+    "min-length": 7,
+    "max-length": 7,
+    "tooltip": false
+  },
+  "battery": {
+    "interval": 5,
+    "format": " {capacity}%",
+    "min-length": 7,
+    "max-length": 7,
+    "tooltip-format": "{time}"
+  },
+  "clock": {
+    "format": "{:%a, %d/%m/%y, %H:%M}",
+    "tooltip": false,
+    "min-length": 20,
+    "max-length": 20
+  }
+}
