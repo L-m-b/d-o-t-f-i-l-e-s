@@ -1,0 +1,24 @@
+# swwws Configuration File
+
+# Global settings applied to all outputs unless overridden
+[global]
+duration = "5s"
+sorting = "Random"
+transition_type = "random"
+transition_step = 90
+queue_size = 500
+recursive = true
+
+# Monitor behavior: Independent, Synchronized, or Grouped
+monitor_behavior = "Independent"
+
+# Shared path for all outputs
+[any]
+path = ".config/BG"
+
+# Per-output specific configuration (optional)
+# Use 'swww query' to see your actual display names
+# [outputs."YOUR-MONITOR-NAME"]
+# path = "/different/path/for/this/monitor"
+# duration = "5m"
+# transition_type = "wipe"
