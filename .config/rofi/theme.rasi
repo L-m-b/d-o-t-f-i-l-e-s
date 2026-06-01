@@ -1,0 +1,81 @@
+* {
+  /* Default background color */
+  background-color: transparent;
+  text-color:       #eeeeee;
+}
+
+
+window {
+  padding: 0.5em;
+
+  border-color: #ff7500;
+  border:       3px;
+  border-radius: 20px;
+
+  width:  36em; 
+  height: 35em;
+
+  background-color: #501515;
+}
+
+mainbox {
+  spacing: 0px;
+  children: [inputbar,listview];
+}
+
+element {
+  background: transparent;
+  children: [ element-icon, element-text ];
+}
+element,element-text,element-icon, button {
+    cursor: pointer;
+}
+
+inputbar {
+  margin: 0 0 0 0;
+  spacing: 0em;
+  children: [ entry,overlay,case-indicator];}
+
+listview, inputbar, message {
+  padding: 0.5em;  
+  border-color: #FF7500;
+  border:        4px;
+  border-radius: 10px 10px 0px 0px;
+
+  columns: 4;
+  lines:   4;
+}
+
+listview {
+  border:       0px 4px 4px 4px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+
+element {
+    border:  0;
+    padding:      10px;
+    margin:       5px;
+    border-radius: 10px;
+    orientation:  vertical;
+    background-color: #882500;
+}
+element-icon {
+  size: 3.2em;
+}
+
+element  selected {
+  border-color: #ff7500;
+  border:       5px;
+  background-color: #ff750070;
+}
+
+element-text, element-icon {
+  font:             inherit; 
+  horizontal-align: 0.5;
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: white/30%;
+  }
