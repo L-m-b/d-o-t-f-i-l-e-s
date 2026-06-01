@@ -1,16 +1,16 @@
-@import "themes/gruvbox.css";
+@import "themes/L-m-b.css";
 /* Change this import to switch themes */
 
 * {
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 16px;
+  font-family: "Comfortaa";
+  font-size: 13pt;
   font-weight: bold;
 }
 
 window#waybar {
-  background-color: transparent;
-  /* background-color: @background; */
+  background-color: alpha(@background,0.5);
   color: @foreground;
+  border-radius: 15;
 }
 
 /* === Shared module styles === */
@@ -25,134 +25,21 @@ window#waybar {
 #pulseaudio,
 #backlight,
 #battery,
-#clock,
 #bluetooth {
-  padding: 2px 8px;
-  margin: 3px;
-  margin-top: 2;
-  margin-bottom: 2;
-  border-radius: 16px;
+  padding: 0 0;
+  margin: 4;
+  margin-top: 4;
+  margin-bottom: 4;
+  border-radius: 12;
   background: @background-alt;
-}
-
-/* === Workspaces === */
-#workspaces {
-  padding: 2;
-  margin: 0;
-  margin-right: 5px;
-  border: 2px solid @scratchpad;
-}
-
-#workspaces button,
-#workspaces button:hover,
-#workspaces button.visible,
-#workspaces button.visible:hover,
-#workspaces button.active,
-#workspaces button.active:hover,
-#workspaces button.urgent {
-  padding: 0 6px;
-}
-
-#workspaces button.visible {
-  background: unset;
-  color: @scratchpad;
-  border-radius: 14px;
-}
-
-#workspaces button:hover,
-#workspaces button.visible:hover {
-  background: @foreground;
-  color: @background;
-}
-
-#workspaces button.urgent {
-  background: @critical;
-  border-radius: 14px;
-}
-
-/* === Module Specific Colors === */
-#scratchpad {
-  color: @scratchpad;
-  border: 2px solid @scratchpad;
-}
-
-#disk,
-#bluetooth {
-  color: @disk;
-  border: 2px solid @disk;
-}
-
-#cpu {
-  color: @cpu;
-  border: 2px solid @cpu;
-}
-
-#memory {
-  color: @memory;
-  border: 2px solid @memory;
-}
-
-#temperature {
-  color: @temperature;
-  border: 2px solid @temperature;
-}
-
-#network,
-#window {
-  color: @network;
-  border: 2px solid @network;
-}
-
-#pulseaudio {
-  color: @pulseaudio;
-  border: 2px solid @pulseaudio;
-}
-
-#backlight {
-  color: @backlight;
-  border: 2px solid @backlight;
-}
-
-#battery {
-  color: @battery;
-  border: 2px solid @battery;
-}
-
-#clock {
-  background:none;
-  color: @clock;
-  border: 0px solid @clock;
+  border: 2 @foreground;
+  border-style: none dotted none dotted;
 }
 
 /* === Conditional Styling === */
-#network.connected {
-  color: @good;
-  border: 2px solid @good;
-}
-
-#network.disconnected {
+#window #network.disconnected {
   color: @critical;
   border: 2px solid @critical;
-}
-
-#temperature.critical {
-  color: @critical;
-  border: 2px solid @critical;
-}
-
-#pulseaudio.muted {
-  color: @critical;
-  border: 2px solid @critical;
-}
-
-#battery.charging {
-  color: @good;
-  border: 2px solid @good;
-}
-
-#battery.warning {
-  color: @warning;
-  border: 2px solid @warning;
 }
 
 /* === Battery Critical Animation === */
@@ -173,7 +60,7 @@ window#waybar {
   }
 }
 
-#battery.critical {
+#window #battery.critical {
   animation: blink-critical 1s infinite;
   border: 2px solid @critical;
   color: @critical;
