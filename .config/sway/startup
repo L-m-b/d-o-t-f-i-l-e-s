@@ -5,6 +5,6 @@ xwayland force
 exec --no-startup-id autotiling
 
 # wallpaper
-exec --no-startup-id swww --restore
-# exec --no-startup-id waypaper --restore
+# exec --no-startup-id swww --restore
+exec --no-startup-id waypaper --restore
 # exec --no-startup-id variety --restore
