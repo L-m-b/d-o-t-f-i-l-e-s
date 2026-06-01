@@ -5,4 +5,5 @@ xwayland force
 exec --no-startup-id autotiling
 
 # wallpaper
-exec --no-startup-id swww --restore
+exec --no-startup-id swww-daemon
+exec --no-startup-id swwws-daemon
