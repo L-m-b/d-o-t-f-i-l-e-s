@@ -8,14 +8,14 @@
 window {
   padding: 0.5em;
 
-  border-color: #ff7500;
+  border-color: #ff750070;
   border:       3px;
   border-radius: 20px;
 
   width:  36em; 
   height: 35em;
 
-  background-color: #501515;
+  background-color: #50151530;
 }
 
 mainbox {
@@ -38,7 +38,7 @@ inputbar {
 
 listview, inputbar, message {
   padding: 0.5em;  
-  border-color: #FF7500;
+  border-color: #FF750070;
   border:        4px;
   border-radius: 10px 10px 0px 0px;
 
@@ -58,14 +58,14 @@ element {
     margin:       5px;
     border-radius: 10px;
     orientation:  vertical;
-    background-color: #882500;
+    background-color: #88250070;
 }
 element-icon {
   size: 3.2em;
 }
 
 element  selected {
-  border-color: #ff7500;
+  border-color: #ff7500aa;
   border:       5px;
   background-color: #ff750070;
 }
