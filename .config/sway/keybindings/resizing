@@ -1,0 +1,7 @@
+    bindsym $mod+less resize shrink height 10px
+    bindsym $mod+greater resize grow height 10px
+    bindsym $mod+control+less resize shrink width 10px
+    bindsym $mod+control+greater resize grow width 10px
+
+    bindsym $mod+alt+comma gaps inner all minus 1px
+    bindsym $mod+alt+period gaps inner all plus 1px
