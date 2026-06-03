@@ -2,14 +2,8 @@
 set $mod Mod4
 set $alt Mod1
 
-# Vim keys
-set $left h
-set $down j
-set $up k
-set $right l
-
 # Fonts
-font pango:JetbrainsMono Nerd Font Bold 12
+font Comfortaa 13
 
 # Cursor
 set $cursor_theme Bibata-Modern-Ice
@@ -20,7 +14,7 @@ set $term kitty
 set $files exec kitty -e yazi
 set $menu --no-startup-id rofi -show drun
 # Gaps and Borders gaps inner 5
-for_window [app_id=".*"] opacity 0.8
+for_window [app_id=".*"] opacity 0.85
 for_window [app_id="float"] floating enable, resize set width 1280 px, resize set height 720 px
 for_window [app_id="blueman-manager"] {
  floating enable
@@ -33,4 +27,9 @@ for_window [app_id="floatr"] {
  resize set width 400 px
  resize set height 300 px
  move position right
+}
+for_window [app_id="floatp"] {
+ floating enable
+ resize set width 500 px
+ resize set height 400 px
 }

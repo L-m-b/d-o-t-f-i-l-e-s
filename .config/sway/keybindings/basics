@@ -1,16 +1,15 @@
 # Basics
 bindsym $mod+Return exec $term
-bindsym $mod+shift+q kill
+bindsym $mod+shift+q kill -s 3
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+r reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes, exit sway' 'swaymsg exit'
 floating_modifier $mod normal
 
 # Lock Screen
-bindsym $mod+c exec --no-startup-id ~/.config/sway/scripts/swaylock.sh
+bindsym $mod+l exec --no-startup-id swaylock
 
 # Power Menu
-bindsym $mod+p exec --no-startup-id wlogout
+bindsym $mod+p exec --no-startup-id kitty --class="floatp" aurevoir -c ~/.config/aurevoir/sway.toml
 
 # Switch to prev/next workspace
 bindsym $mod+slash workspace next
